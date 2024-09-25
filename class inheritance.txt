@@ -1,0 +1,9 @@
+In JavaScript, when you create a class that inherits from another class (called a "derived class"), its constructor works differently from a regular function.
+
+- **Regular functions**: When you use `new` with a normal function, JavaScript automatically creates an empty object and assigns it to `this`.
+  
+- **Derived constructors (inherited classes)**: If you use `new` with a derived class (a class that extends another), JavaScript **doesn't** automatically create an object. Instead, the derived constructor needs to call the `super()` function, which runs the parent class's constructor and creates the object. Without calling `super()`, the object for `this` doesn’t get created, and JavaScript throws an error.
+
+So, in short:  
+- Regular functions with `new` create an object automatically.  
+- Derived class constructors need `super()` to create the object for `this`.
